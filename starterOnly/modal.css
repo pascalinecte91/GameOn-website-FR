@@ -530,3 +530,10 @@ footer {
 .hidden {
   display: none;
 }
+
+.formData.fieldError input {
+  border: 1px solid red;
+}
+.formData.fieldError span {
+  color: red;
+}

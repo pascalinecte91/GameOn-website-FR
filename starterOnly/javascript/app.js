@@ -3,12 +3,13 @@ const formSubscribe = document.getElementById('formSubscribe');
 // validation  des champs
 
 // console.dir(formSubscribe);
+
 // console.dir(e.target);
 
 formSubscribe.addEventListener('submit', function (event) {
   event.preventDefault()
   validateFields();
-  let formIsValid = document.getElementsByClassName('error').length == 0;
+  let formIsValid = document.getElementsByClassName('fieldError').length == 0;
 
   if (formIsValid) {
     // on ferme la modale et on vide les champs du formulaire
@@ -17,18 +18,32 @@ formSubscribe.addEventListener('submit', function (event) {
   }
 });
 
-// function validateFields() {
-//     validateFirstname();
-// }
+function validateFields() {
+  validateInputText('first');
+  validateInputText('last');
+}
 
-// function validateFirstname() {
-//   let field = document.getElementById('first');
-//   let fieldValue = field.value;
+// validation champs
+function validateInputText(fieldId) {
+  const field = document.getElementById(fieldId);
 
-//   const regex = /[A-Z]/g;
-//   let isValid = regex.test(fieldValue);
+  const fieldValue = field.value.trim();
+  const regex = /[a-zA-Z]/g;
+  let isValid = fieldValue.length > 1
+    && regex.test(fieldValue);
+    
+  const fieldErrorId = fieldId + 'Error';
+  const fieldError = document.getElementById(fieldErrorId);
 
-//   console.dir(field);
-//   console.log(fieldValue);
-//   console.log(isValid);
-// }
+  afficherErreur(fieldError, isValid);
+}
+
+function afficherErreur(fieldError, isValid) {
+  if (isValid) {
+    fieldError.closest('.formData').classList.remove('fieldError')
+    fieldError.innerHTML = "";
+  } else {
+    fieldError.closest('.formData').classList.add('fieldError')
+    fieldError.innerHTML = "error";
+  }
+}
