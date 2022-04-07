@@ -30,22 +30,22 @@
 
 - Des messages d'erreur spécifiques doivent apparaître sous l'entrée qui n'est pas correcte. Les messages d'erreur doivent s'afficher sous le champ de saisie associé. Exemples :
 
-- "Veuillez entrer 2 caractères ou plus pour le champ du nom."
+- "Veuillez entrer 2 caractères ou plus pour le champ du nom." ✅
 
-- "Vous devez choisir une option."
+- "Vous devez choisir une option." ✅
 
 - "Vous devez vérifier que vous acceptez les termes et conditions."
 
-- "Vous devez entrer votre date de naissance."
+- "Vous devez entrer votre date de naissance." ✅
 
 ### Implémenter les entrées du formulaire
 
-- (1) Lier les labels aux entrées dans le HTML en utilisant les attributs "for" et "id" dans le code existant. Corriger le code HTML quand nécessaire.
-- (2) Utiliser du JavaScript pur (pas de jQuery) pour terminer le formulaire :
+- (1) Lier les labels aux entrées dans le HTML en utilisant les attributs "for" et "id" dans le code existant. Corriger le code HTML quand nécessaire. ✅
+- (2) Utiliser du JavaScript pur (pas de jQuery) pour terminer le formulaire  ✅
 
 - Le formulaire doit être valide quand l'utilisateur clique sur "Submit"
 Les données doivent être saisies correctement :
-- (1) Le champ Prénom a un minimum de 2 caractères / n'est pas vide.
+- (1) Le champ Prénom a un minimum de 2 caractères / n'est pas vide. 
 - (2) Le champ du nom de famille a un minimum de 2 caractères / n'est pas vide.
 - (3) L'adresse électronique est valide.
 - (4) Pour le nombre de concours, une valeur numérique est saisie.

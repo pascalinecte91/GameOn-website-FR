@@ -532,8 +532,10 @@ footer {
 }
 
 .formData.fieldError input {
-  border: 1px solid red;
+  border: 2.5px solid red;
+  
 }
 .formData.fieldError span {
   color: red;
+  font-size: 0.9rem;
 }
