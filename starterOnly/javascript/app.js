@@ -12,6 +12,7 @@ formSubscribe.addEventListener('submit', function (event) {
   }
 });
 
+
 function validateFields() {
   validateInputText('first');
   validateInputText('last');
@@ -95,6 +96,9 @@ function validateInputCondition() {
   const condGeneError = document.getElementById('condGeneError');
   const condGeneSelected = document.querySelector('[name=checkbox]:checked');
   let isValid = null !== condGeneSelected;
-console.dir(condGeneSelected);
+  
   afficherErreur(condGeneError, isValid);
+
 }
+
+
