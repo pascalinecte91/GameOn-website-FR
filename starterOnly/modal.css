@@ -477,12 +477,68 @@ input[data-error]::after {
   display: none;
 }
 
+/**************** ADD ***************/
+.hidden {
+  display: none;
+}
+
+.formData.fieldError input {
+  border: 2.5px solid red;
+
+}
+
+.formData.fieldError span {
+  color: red;
+  font-size: 0.9rem;
+}
+
 footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px;
 }
 
+/*******  MODAL REMERCIEMENTS  ******/
+
+.bgroundThankYou {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.contentThankYou {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  height: 800px; ;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: black;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.contentThankYou {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+
+
+/**********  REPONSIVE  ************/
 
 @media screen and (max-width: 1023.99px) {
   .hero-headline {
@@ -500,6 +556,9 @@ footer {
     object-position: 40% 50%;
   }
 }
+
+
+/**********  REPONSIVE  ************/
 
 @media screen and (max-width: 767.99px) {
 
@@ -579,6 +638,7 @@ footer {
   }
 }
 
+/**********  REPONSIVE  ************/
 
 @media screen and (max-width: 540px) {
 
@@ -620,11 +680,17 @@ footer {
   }
 }
 
+/**********  REPONSIVE  ************/
+
 @media screen and (max-width: 400px) {
   .topnav{
     margin: 0px;
   }
 }
+
+/*****************  KEYS  ***********/
+
+
 @keyframes modalopen {
   from {
     opacity: 0;
@@ -634,19 +700,4 @@ footer {
   to {
     opacity: 1;
   }
-}
-
-
-.hidden {
-  display: none;
-}
-
-.formData.fieldError input {
-  border: 2.5px solid red;
-
-}
-
-.formData.fieldError span {
-  color: red;
-  font-size: 0.9rem;
 }

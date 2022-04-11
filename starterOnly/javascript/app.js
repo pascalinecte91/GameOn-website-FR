@@ -1,17 +1,18 @@
 const formSubscribe = document.getElementById('formSubscribe');
 
 formSubscribe.addEventListener('submit', function (event) {
-  event.preventDefault()
   validateFields();
   let formIsValid = document.getElementsByClassName('fieldError').length == 0;
 
   if (formIsValid) {
-    // on ferme la modale et on vide les champs du formulaire
-  } else {
-    // on fait rien
+    fieldError.closest('.formData').classList.remove('fieldError')
+    fieldError.innerHTML = "";
+
   }
+  event.preventDefault()
 });
 
+//validation de tous les champs du formulaire
 
 function validateFields() {
   validateInputText('first');
@@ -19,14 +20,14 @@ function validateFields() {
   validateInputEmail('email');
   validateInputBirsthdate('birthdate');
   validateInputQty('quantity');
-  validateInputCheckbox();
-  validateInputCondition();
+  validateInputCheckbox('checkboxError', 'location');
+  validateInputCheckbox('condGeneError', 'checkbox');
 }
 
 function validateInputText(fieldId) {
   const field = document.getElementById(fieldId);
   const fieldValue = field.value.trim();
-  const regexText = /^(?=.{2,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/;
+  const regexText = /^(?=.{2,40}$)+(?:[ -'\w]+)$/;
   let isValid = regexText.test(fieldValue);
 
   const fieldErrorId = fieldId + 'Error';
@@ -35,12 +36,13 @@ function validateInputText(fieldId) {
   afficherErreur(fieldError, isValid);
 }
 
+// si pas d'erreur de champs trouvé, ne pas afficher le message
 function afficherErreur(fieldError, isValid) {
   if (isValid) {
     fieldError.closest('.formData').classList.remove('fieldError')
-    fieldError.innerHTML = ""; // si ok : vide
+    fieldError.innerHTML = "";
   } else {
-    // sinon ajout du message d'erreur
+    // sinon ajout du message d'erreur data-message html
     fieldError.closest('.formData').classList.add('fieldError')
     fieldError.innerHTML = fieldError.dataset.message;
   }
@@ -62,9 +64,8 @@ function validateInputEmail(fieldId) {
 function validateInputQty(fieldId) {
   const field = document.getElementById(fieldId);
   const fieldValue = field.value.trim();
-  const regexNbr = /^[0-9]\d*$/;
-  let isValid = fieldValue.length > 0
-    && regexNbr.test(fieldValue);
+  const regexNbr = /\d/;
+  let isValid = regexNbr.test(fieldValue);
 
   const fieldErrorId = fieldId + 'Error';
   const fieldError = document.getElementById(fieldErrorId);
@@ -83,22 +84,11 @@ function validateInputBirsthdate(fieldId) {
   afficherErreur(fieldError, isValid);
 }
 
-function validateInputCheckbox() {
-  const checkboxError = document.getElementById('checkboxError');
-  const checkboxSelected = document.querySelector('[name=location]:checked');
+function validateInputCheckbox(fieldError, fieldName) {
+  const checkboxError = document.getElementById(fieldError);
+  const checkboxSelected = document.querySelector('[name=' + fieldName + ']:checked');
   let isValid = null !== checkboxSelected;
 
   afficherErreur(checkboxError, isValid);
 }
-
-
-function validateInputCondition() {
-  const condGeneError = document.getElementById('condGeneError');
-  const condGeneSelected = document.querySelector('[name=checkbox]:checked');
-  let isValid = null !== condGeneSelected;
-  
-  afficherErreur(condGeneError, isValid);
-
-}
-
 
