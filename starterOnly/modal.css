@@ -515,7 +515,7 @@ footer {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  height: 800px; ;
+  height: 830px; ;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: black;
@@ -537,6 +537,21 @@ footer {
 }
 
 
+#btnModal{
+background: #fe142f;
+display: block;
+margin: 0 auto;
+border-radius: 7px;
+font-size: 1rem;
+padding: 12px 42px;
+color: #fff;
+cursor: pointer;
+border: 0;
+}
+
+p.btnSecondModal  {
+  margin-bottom: 10vw;
+}
 
 /**********  REPONSIVE  ************/
 

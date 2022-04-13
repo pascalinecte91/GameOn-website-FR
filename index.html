@@ -13,7 +13,8 @@
 <body>
   <div class="topnav" id="myTopnav">
     <div class="header-logo">
-      <img alt="logo" src="./starterOnly/Logo.png" width="auto" height="auto" />
+      <!-- <img src="./starterOnly/Logo.png" alt="logo" width="auto" height="auto" /> -->
+      <img src="./starterOnly/Logo.png" alt="logo">
     </div>
     <div class="main-navbar">
 
@@ -27,7 +28,7 @@
       </a>
     </div>
   </div>
-  </div>
+  <!-- </div> -->
   <main>
     <div class="hero-section">
       <div class="hero-content">
@@ -55,7 +56,7 @@
       <div class="content">
         <span id="closeSubscribe" class="close"></span>
         <div class="modal-body">
-          <form id="formSubscribe" name="reserve" action="index.html" method="get">
+          <form id="formSubscribe" name="reserve" action="index.html" method="get" >
             <div class="formData">
               <label for="first">Prénom</label><br>
               <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
@@ -83,7 +84,8 @@
             </div>
 
             <div class="formData">
-              <label for="text-label">A quel tournoi souhaitez-vous participer cette année ?</label><br>
+              <!-- <label for="text-label">A quel tournoi souhaitez-vous participer cette année ?</label><br> -->
+              <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p><br>
               <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
@@ -126,24 +128,22 @@
               </label>
               <br>
             </div>
-
+            <!-- fin du formulaire rempli -->
             <!-- button de submit -->
-            <input type="submit" id="register" class="btn-submit" value="C'est parti"> </input>
+            <input type="submit" id="btn-register" class="btn-submit " value="C'est parti">
           </form>
         </div>
       </div>
     </div>
-    </div>
+    <!-- </div> -->
+    <!-- affichage message seconde modal -->
     <div class="bgroundThankYou hidden " id="modalSubscribeThankYou">
       <div class="contentThankYou">
-      <span class="closeSubscribe" id="close"></span>
-      <div class="contentsThankYou">
-        <p class="contentThankYou">Vos informations ont été enregistrées<br>
-          Merci pour votre inscription <br></p>
+        <p class="btnSecondModal">Vos informations ont été enregistrées<br>
+          Merci pour votre inscription</p><br>
+        <input type="submit" class="btn-Submit " id="btnModal" value="Fermer">
       </div>
-      <input type="submit" class="btnSubmit btnThankYou" value="Fermer">
     </div>
-  </div>
   </main>
   <footer>
     <p class="copyrights">
@@ -151,8 +151,6 @@
     </p>
   </footer>
   <script src="./starterOnly/javascript/app.js"></script>
-  <script src="./starterOnly/javascript/modal.js"></script>
-  <script src="./starterOnly/javascript/nav.js"></script>
 </body>
 
 </html>
