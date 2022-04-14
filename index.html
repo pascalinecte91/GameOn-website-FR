@@ -56,30 +56,30 @@
       <div class="content">
         <span id="closeSubscribe" class="close"></span>
         <div class="modal-body">
-          <form id="formSubscribe" name="reserve" action="index.html" method="get" >
+          <form id="formSubscribe" name="reserve" action="index.html" method="get">
             <div class="formData">
               <label for="first">Prénom</label><br>
-              <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
+              <input class="text-control" type="text" id="first" name="first" minlength="2" placeholder="Ex:Banby" /><br>
               <span id="firstError" data-message="Veuillez entrer 2 caractères ou plus pour le champ du prénom"></span>
             </div>
             <div class="formData">
               <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="last" name="last" minlength="2" /><br>
+              <input class="text-control" type="text" id="last" name="last" minlength="2" placeholder="Ex: Durand" /><br>
               <span id="lastError" data-message="Veuillez entrer 2 caractères ou plus pour le champ du nom"></span>
             </div>
             <div class="formData">
               <label for="email">E-mail</label><br>
-              <input class="text-control" type="email" id="email" name="email" /><br>
+              <input class="text-control" type="email" id="email" name="email" placeholder="Ex: toto@gmail.com" /><br>
               <span id="emailError" data-message="Vous devez entrer un email valide."></span>
             </div>
             <div class="formData">
               <label for="birthdate">Date de naissance</label><br>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
-              <span id="birthdateError" data-message="Vous devez entrer votre date de naissance."></span>
+              <input class="text-control" type="date" id="birthdate" name="birthdate" min="1920-01-01" max="2004-04-01" /><br>
+              <span id="birthdateError" data-message="Vous devez entrer votre date de naissance et avoir au moins 16 ans."></span>
             </div>
             <div class="formData">
               <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="Ex: Nombre entre 0 et 99">
               <span id="quantityError" data-message="Veuillez saisir une quantité"></span>
             </div>
 
@@ -130,6 +130,7 @@
             </div>
             <!-- fin du formulaire rempli -->
             <!-- button de submit -->
+
             <input type="submit" id="btn-register" class="btn-submit " value="C'est parti">
           </form>
         </div>
@@ -150,6 +151,7 @@
       Copyright 2014 - 2022, GameOn Inc.
     </p>
   </footer>
+  <script src="./starterOnly/javascript/modal.js"></script>
   <script src="./starterOnly/javascript/app.js"></script>
 </body>
 

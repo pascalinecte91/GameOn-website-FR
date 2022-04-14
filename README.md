@@ -34,7 +34,8 @@
 
 - "Vous devez choisir une option." ✅
 
-- "Vous devez vérifier que vous acceptez les termes et conditions."
+- "Veuillez entrer 2 caractères ou plus pour le champ du nom." ✅
+- "Vous devez vérifier que vous acceptez les termes et conditions."✅
 
 - "Vous devez entrer votre date de naissance." ✅
 
@@ -56,6 +57,4 @@ Conserver les données du formulaire (ne pas effacer le formulaire) lorsqu'il ne
 
 ### TODO Fermer la modale
 
-- Ajouter la fonctionnalité au bouton (x)
-
-✅
+- Ajouter la fonctionnalité au bouton (x) ✅
