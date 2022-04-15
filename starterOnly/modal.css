@@ -34,6 +34,7 @@ img {
 .topnav {
   overflow: hidden;
   margin: 3.5%;
+  padding-left: 8px;
 }
 
 .header-logo {
@@ -42,6 +43,7 @@ img {
 
 .main-navbar {
   float: right;
+  /* line-height: 5px; */
 }
 
 .topnav a {
@@ -49,7 +51,7 @@ img {
   display: block;
   color: #000000;
   text-align: center;
-  padding: 12px 12px;
+  padding: 12px 16px;
   margin: 5px;
   text-decoration: none;
   font-size: 20px;
@@ -589,9 +591,6 @@ footer {
 
 @media screen and (max-width: 767.99px) {
 
-  .header-logo {
-    padding-left: 2rem;
-  }
 
   .hero-section {
     display: block;
@@ -601,7 +600,7 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
 
   .hero-content::after {
@@ -613,7 +612,7 @@ footer {
   }
 
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     white-space: normal;
   }
 
@@ -659,7 +658,6 @@ footer {
   }
 
   .topnav.responsive a {
-    float: none;
     display: block;
     text-align: left;
   }
@@ -667,7 +665,7 @@ footer {
 
 /**********  REPONSIVE  ************/
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 539.99px) {
 
   .main {
     margin: 0;
@@ -677,10 +675,14 @@ footer {
     margin-right: 20px;
   }
 
+  .main-navbar {
+    line-height: 5px;
+  }
 
   .topnav a.icon {
     float: right;
     display: block;
+    margin-top: 7px;
   }
 
   .topnav.responsive a {
@@ -691,8 +693,8 @@ footer {
     font-size: 1.2rem;
   }
 
-  .hero-headline {
-    font-size: 3rem;
+  .hero-headline h1  {
+    font-size: 2.5rem;
   }
 
   .hero-img img {
@@ -705,16 +707,57 @@ footer {
   .content{
     width:90%;
   }
+  p.btnSecondModal  {
+    margin:10px;
+  }
 }
 
 /**********  REPONSIVE  ************/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 399.99px) {
   .topnav{
     margin: 0px;
+
   }
+
+  .topnav a.icon {
+    margin-top: 15px;
+  }
+
+  .main-navbar {
+    line-height: 5px;
+    padding-left: 10px;
+  }
+
+  .hero-content {
+    min-width: inherit;
+  }
+  
+  .header-logo img {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
 }
 
+@media screen and (max-width: 359.99px) {
+  .header-logo img {
+    height: 40px;
+  }
+@media screen and (max-width: 329.99px) {
+  .header-logo img {
+    height: 35px;
+  }
+}
+.hero-headline {
+padding-right: 1px;
+font-size: 1.5rem;
+}
+
+.topnav a.icon {
+  margin-top: 7px;
+}
+}
 /*****************  KEYS  ***********/
 
 
